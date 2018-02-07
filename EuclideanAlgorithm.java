@@ -15,12 +15,22 @@ public class EuclideanAlgorithm{
     int residual = 1;
     int gcd = 0;
     int quotient = 0;
+
+    if(number_a == number_b){
+        gcd = number_a;
+        System.out.println(gcd);
+    }
     
     if(number_a>number_b){
         while(residual != 0){
             quotient = (int) Math.floor(number_a/number_b);
             previous_residual = residual;
             residual = number_a-(quotient*number_b);
+            if(residual == 0){
+                //if b is a divisor of a then b is their GCD
+                gcd = number_b;
+                break;
+            }
             gcd=previous_residual;
             number_a = number_b;
             number_b = residual;
@@ -32,6 +42,11 @@ public class EuclideanAlgorithm{
             quotient = (int) Math.floor(number_b/number_a);
             previous_residual = residual;
             residual = number_b-(quotient*number_a);
+            if(residual == 0){
+                //if a is a divisor of b then a is their GCD
+                gcd = number_a;
+                break;
+            }
             gcd=previous_residual;
             number_b = number_a;
             number_a = residual;
