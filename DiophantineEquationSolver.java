@@ -19,11 +19,12 @@ public class DiophantineEquationSolver{
     int variable_b = Integer.parseInt(args[1]);
     int sum = Integer.parseInt(args[3]);
     int sum1 = 0;
+    EuclideanAlgorithm GCD = new EuclideanAlgorithm(n, number);
     //Grabbing the input from user and assigning them to variables.
 
     //If the GCD of variable_a and variable_b divides the sum then there is 
     //a solution
-    if(sum % gcd(variable_a, variable_b)){
+    if(sum % GCD(variable_a, variable_b)){
         //this checks whether or not the sum is a multiple of the GCD
         
     }

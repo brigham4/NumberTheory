@@ -5,7 +5,6 @@ public class Sieve{
     int number = Integer.parseInt(args[0]);
     ArrayList<Integer> full_array = new ArrayList<Integer>();
     int upto = (int) Math.floor(Math.sqrt(number));
-    ArrayList<Integer> primes = new ArrayList<Integer>();
     int count = 0;
 
     for(int n=2; n <= number; n++){
