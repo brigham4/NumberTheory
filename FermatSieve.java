@@ -13,11 +13,11 @@ public class FermatSieve{
     for(int n=0; n <= number; n++){
         full_array.add(n);
         //fill an array from 1 to n
-        //System.out.println(full_array);
+        System.out.println(full_array);
     }
-    for(int n = 0; n <= full_array.size(); n++){
-        if(n % 20 == 2 || n % 20 == 3 || n % 20 == 6 || n % 20 == 7 || n % 20 == 8 || n % 20 == 10 || n % 20 == 11 || n % 20 == 12 || n % 20 == 13 || n % 20 == 14 || n % 20 == 15 || n % 20 == 17 || n % 20 == 18 || n % 20 == 19){
-            System.out.println( n + " mod 20 is: " + n % 20 );
+    for(int n = 0; n <= full_array.size() + count; n++){
+        if(n % 20 == 2 || n % 20 == 3 || n % 20 == 7 || n % 20 == 8 || n % 20 == 11 || n % 20 == 12 || n % 20 == 13 || n % 20 == 14 || n % 20 == 15 || n % 20 == 17 || n % 20 == 18 || n % 20 == 19){
+            System.out.println( n + " mod 10 is: " + n % 10 );
             System.out.println("I am going to remove: " + n);
             full_array.remove(n - count);
             count++;
