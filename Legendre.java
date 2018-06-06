@@ -8,6 +8,7 @@ public class Legendre{
     public Legendre(int num_r, int num_p){
         this.r = num_r;
         this.p = num_p;
+        //HELLO
     }
     public int Symbol(){
         int euler_out = 0;
